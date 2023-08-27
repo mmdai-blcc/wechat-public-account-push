@@ -48,7 +48,7 @@ const USER_CONFIG = {
   
     /** 生日消息和节日消息 */
     // 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
-    birthdayMessage: flase,
+    birthdayMessage: true,
   
     /** 学生课表 */
     // 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
