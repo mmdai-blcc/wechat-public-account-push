@@ -86,7 +86,7 @@ const USER_CONFIG = {
   LITERARY_PREFERENCE: '',
 
   // 默认所在省份, USERS 中没填的话,会默认拿这里的省份
-  PROVINCE: '',
+  PROVINCE: '上海',
   // 默认所在城市, USERS 中没填的话, 会默认拿这里的城市
   CITY: '上海',
   
@@ -127,8 +127,16 @@ const USER_CONFIG = {
       // 如果courseSchedule是一个数组，则认为不区分单双周，直接填写星期几对应的课表数据即可
       // 如果courseSchedule是一个对象（如下面所示）
       courseSchedule: {
+        // 单双周的基准
+        benchmark: {
+          // 这里设置一个日期，用来作为判断课表是否单双周的依据
+          date: '2023-08-28',
+          // 该日期是否为单周
+          isOdd: true
+        },
         // 课表
         courses: {
+          // 单周课表
           // 从星期一到星期日（星期六和星期日的课表数组可不填写）
           odd: [
             // 周三
@@ -139,6 +147,11 @@ const USER_CONFIG = {
             [
               '13:00-15:45 翻译学概论'
             ]
+          ],
+          // 双周课表
+          even: [
+            ['18:00-20:45 英美诗歌研究'],
+            ['13:00-15:45 翻译学概论']
           ]
         }
       },
